@@ -1,0 +1,12 @@
+before_script:
+  # Exit one errors.
+  - set -e
+
+  # Install Behat
+  - cd ./behat
+  - cp behat.local.yml.example behat.local.yml
+  - composer install
+
+
+script:
+  - ./bin/behat --tags=~wip
